@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import HeaderButton from '../header/Header_button';
 import LogList from '../header/Log_list';
 import NavList from '../header/Nav_list';
 import Start_img from '../header/Start_img';
+
 
 class Header extends Component {
     render() {
@@ -10,9 +12,11 @@ class Header extends Component {
         <header>
             <div className='grid-container'>
                 <div className="row">
-                    <div className="col-10">
-                        <Start_img />
-                    </div>
+                    <Link to='/'>
+                        <div className="col-10">
+                            <Start_img />
+                        </div>
+                    </Link>
                     <nav className='col-11 navigation-container'>
                         <div className='row'>
                             <div className='col-9'>

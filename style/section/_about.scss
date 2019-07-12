@@ -1,0 +1,49 @@
+.about-container {
+    width:100%;
+    height:700px;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    
+    .about_img {
+        img {
+            width:100%;
+            }
+        }
+
+    .about-first_col {
+        display: flex;
+        justify-content: center;
+        margin-right:30px;
+        .about-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            .decoration {
+                margin-top:20px;
+            }
+            .signature {
+                margin-top:50px;
+                width:40%;
+                margin-left:300px;
+            }
+            h3 {
+                font-family: $main-font;
+                font-size: 30px;
+                color: $darkerMain;
+                font-weight: 400;
+            } 
+            p {
+                font-family: $main-font;
+                font-size: 20px;
+                color: $darkerMain;
+                font-weight: 400;
+                margin-top:20px;
+                border-spacing: 100px;
+            }
+            
+        }
+    }   
+}
+

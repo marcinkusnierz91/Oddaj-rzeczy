@@ -1,0 +1,88 @@
+.specials-title {
+    display: flex;
+    justify-content: center;
+    h2 {
+        margin-top:50px;
+        font-size: 40px;
+        font-family: $main-font;
+        color: $darkerMain;
+        font-weight: 400;
+    }
+}
+
+.specials-decoration {
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+}
+
+.specials-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .specials-columns {
+        margin-top: 20px;
+        height: 350px;
+        background-color: #ebebeb;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .special-column {
+            display: flex;
+            flex-direction: column;            
+            align-items: center;
+            &:nth-of-type(1){
+                margin-top:5px;
+            }
+            &:nth-of-type(3){
+                margin-bottom:25px;
+            }
+            &:nth-of-type(4){
+                margin-top:32px;
+            }
+            img {
+                // margin-bottom: 20px;
+            }
+
+            h2 {
+                margin-top:10px;
+                text-align: center;
+                font-family: $main-font;
+                font-size: 18px;
+                font-weight: 400;
+                color: $darkerMain;
+                position: relative;
+                margin-bottom:20px;
+                
+            }
+            .underline {
+                width:100px;
+                height: 1px;
+                background-color: $darkerMain;
+                
+            }
+        }
+    }
+}
+
+.specials-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom:40px;
+    .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $darkerMain;
+        font-size: 30px;
+        text-decoration: none;
+        text-align: center;
+        width: 250px;
+        height:80px;
+        word-break: normal;
+        border: 1px solid $darkerMain;
+        font-weight: 300;
+    }
+    
+}
