@@ -5,7 +5,7 @@ import SpecialsButton from  './Specials_button'
 class Specials extends Component {
     render() {
         return (
-            <section className="grid-container" id='specials'>
+            <section name='Specials' className="grid-container" id='specials'>
                 <div className="row">
                     <div className="col-21 specials-title">
                         <h2>Wystarczą 4 proste kroki</h2>                        

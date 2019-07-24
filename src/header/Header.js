@@ -9,7 +9,7 @@ import Start_img from '../header/Start_img';
 class Header extends Component {
     render() {
         return (
-        <header>
+        <header name='Header'>
             <div className='grid-container'>
                 <div className="row">
                     <Link to='/'>

@@ -3,13 +3,13 @@ import Items from './Items';
 import Organization from './Organization';
 
 
-class NonGovMenu extends Component {
+class LocalCollectionMenu extends Component {
     render() {
         return (
             <>
                 <div className="row">
                     <div className="col-21 menu-description">
-                        <h3 className='col-9'>W naszej bazie znajdziesz listę zweryfikowanych Organizacji pozarządowych, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</h3>
+                        <h3 className='col-9'>W naszej bazie znajdziesz listę zweryfikowanych lokalnych zbiórek, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</h3>
                     </div>
                 </div>
                 <div className="row">
@@ -34,4 +34,4 @@ class NonGovMenu extends Component {
     }
 }
 
-export default NonGovMenu;
+export default LocalCollectionMenu;

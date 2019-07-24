@@ -5,7 +5,7 @@ import AboutImage from './About_img';
 class About extends Component {
     render() {
         return (
-            <section className="grid-container" id='about'>
+            <section name='About' className="grid-container" id='about'>
                 <div className="row">
                     <div className="col-21 about-container">
                         <div className="col-10 about-first_col">

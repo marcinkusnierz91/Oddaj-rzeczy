@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Foundation from '../section/Foundation';
+import Organization from './Organization';
 import Items from '../section/Items';
 
 
@@ -17,9 +17,9 @@ class FoundationsMenu extends Component {
                     <div className="col-21 menu-info_container">
                         <div className="col-17 menu-info">
                             <div className="col-8 menu-info_foundation">
-                                <Foundation title='"Dbam o zdrowie"' description='Pomoc osobom znajdującym się w trudnej sytuacji życiowej.'/>
-                                <Foundation title='"Dla dzieci"' description='Pomoc dzieciom z ubogich rodzin.'/>
-                                <Foundation title='"Bez domu"' description='Pomoc dla osób nie posiadających miejsca zamieszkania.'/>
+                                <Organization title='"Dbam o zdrowie"' description='Pomoc osobom znajdującym się w trudnej sytuacji życiowej.'/>
+                                <Organization title='"Dla dzieci"' description='Pomoc dzieciom z ubogich rodzin.'/>
+                                <Organization title='"Bez domu"' description='Pomoc dla osób nie posiadających miejsca zamieszkania.'/>
                             </div>
                             <div className="col-7 menu-info_items">
                                 <Items items='ubrania, jedzenie, sprzęt AGD, meble, zabawki'/>

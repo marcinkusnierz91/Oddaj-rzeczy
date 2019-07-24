@@ -13,13 +13,23 @@ class Form extends Component {
         })    
     }
 
-    handleSubmit = event => {
+    handleSubmit = (event) => {
         event.preventDefault();
+        console.log(this.state)
     }
+
+    // componentDidMount() {
+    //     console.log('component mounted')
+    // }
+
+    // componentDidUpdate(prevProps, prevState) {
+    //     console.log('component updated');
+    //     console.log(prevProps, prevState);
+    // }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} id='form'>
+            <form onSubmit={this.handleSubmit} id='form' name='Form'>
                 <div className="row">
                     <div className="col-17 form-contact">
                         <div className="col-4">

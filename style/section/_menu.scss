@@ -45,6 +45,11 @@
                 &:hover {
                     border:1px solid $darkerMain;
                 }
+                .menu-button {
+                    text-decoration: none;
+                    color: $darkerMain;
+                }
+
             }
             
         }
@@ -130,6 +135,14 @@
             &:hover {
                 border: 1px solid $darkerMain;
             }
+            .pageNum {
+                text-decoration: none;
+                color: $darkerMain;
+            }
+            .active {
+                border: 1px solid $darkerMain;
+            }
         }
     }
 }
+
