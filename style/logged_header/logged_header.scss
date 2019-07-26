@@ -1,0 +1,20 @@
+.logged_header-info {
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+    .rectangle {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+}
+
+.logged-title {
+    margin-top: 50px;
+    h2 {
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        color: $darkerMain;
+    }
+}

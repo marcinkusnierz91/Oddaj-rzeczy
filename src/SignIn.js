@@ -1,0 +1,87 @@
+import React, {Component} from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import NavList from '../src/home_header/Nav_list';
+import LogList from '../src/home_header/Log_list';
+
+class SignIn extends Component {
+    state = {
+        email: 'email',
+        password: 'password',
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.id]: event.target.value,
+        })    
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(this.state)
+    }
+    
+    render() {
+        return (
+            <section className='grid-container signin'>
+                <div className="row">
+                    <div className="col-10"></div>
+                    <nav className="col-11">
+                        <div className='row'>
+                            <div className='col-9'>
+                                <LogList />
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-10">
+                                <NavList />  
+                            </div>
+                        </div>  
+                    </nav>
+                </div>
+
+                <form onSubmit={this.handleSubmit} className='signin-form row'>
+                    <div className="col-21">
+                        <div className=" title">
+                            <div className="col-10 signin-title">
+                                <h3>Zaloguj się</h3>
+                            </div>
+                        </div>    
+                        <div className="row">
+                            <div className="col-10 decoration">
+                                <img src={require('./images/decoration-1.svg')} alt="decoration"/>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-10">
+                                <div className="col-4 signin-data">
+                                    <input type='email' value={this.state.email} id='email' onChange={this.handleChange}/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-10">
+                                <div className="col-4 signin-data">
+                                    <input type='email' value={this.state.password} id='password' onChange={this.handleChange}/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row signin-buttons">
+                            <div className="col-2 form-button">
+                                <input type="submit" value='Załóż konto' className='form-submit'/>
+                            </div>
+                            <div className="col-2 form-button">
+                                <Link to='/logged/'>
+                                    <input type="submit" value='Zaloguj się' className='form-submit'/>
+                                </Link>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+        )
+    }
+}
+
+
+export default SignIn

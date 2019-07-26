@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import './App.scss';
-import {BrowserRouter,Switch, Route} from 'react-router-dom';
+import {HashRouter,BrowserRouter,Switch, Route} from 'react-router-dom';
 import Home from './Home'
-import FoundationsMenu from './section/Foundations_menu';
-
+// import FoundationsMenu from './home_section/menu/Foundations_menu';
+// import SignIn from './header/SignIn';
+import LoggedPage from './LoggedPage'
+import SignIn from './SignIn';
 
 
 
@@ -11,13 +13,21 @@ import FoundationsMenu from './section/Foundations_menu';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
-          <Home />
-          {/* <Route path='/' component={Home}/> */}
+          {/* <Home/> */}
+          {/* <SignIn/> */}
+          {/* <LoggedPage /> */}
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/signin' component={SignIn} />
+            <Route path='/logged/' component={LoggedPage} />
+          </Switch>
+          
+          
         </div>
        
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
