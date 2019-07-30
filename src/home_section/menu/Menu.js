@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {BrowserRouter,Switch, Route} from 'react-router-dom';
-import { NavLink, Link } from 'react-router-dom';
-import Foundation from './Organization';
-import Items from './Items';
+
+import { Link } from 'react-router-dom';
+
+
 import FoundationsMenu from './Foundations_menu';
 import NonGovMenu from './NonGov_menu';
 import LocalCollectionMenu from './LocalCollection_menu';
@@ -33,9 +33,10 @@ class Menu extends Component {
     }
 
     render() {
-        const activeStyle = {
-            border: '1px solid $darkerMain'
-          };
+        console.log(this.state)
+        // const activeStyle = {
+        //     border: '1px solid $darkerMain'
+        //   };
 
         let page;
         if(this.state.page == 1) {
@@ -75,9 +76,9 @@ class Menu extends Component {
 
                     <div className="row">
                         <div className="col-21 menu-pages">
-                            <div className="col-1"><Link to='/' className='pageNum' activeClassName="active">1</Link></div>
-                            <div className="col-1"><Link exact to='/nongov' className='pageNum' activeClassName="active">2</Link></div>
-                            <div className="col-1"><Link exact to='/collections' className='pageNum' activeClassName="active">3</Link></div>
+                            <div className="col-1 pageNum">1</div>
+                            <div className="col-1 pageNum">2</div>
+                            <div className="col-1 pageNum">3</div>
                         </div>
                     </div>
                 </section>

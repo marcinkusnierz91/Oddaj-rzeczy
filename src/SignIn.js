@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NavList from '../src/home_header/Nav_list';
 import LogList from '../src/home_header/Log_list';
 

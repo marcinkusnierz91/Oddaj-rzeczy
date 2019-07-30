@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
-import {BrowserRouter,Switch, Route} from 'react-router-dom';
 import LoggedImg from './Logged_img';
 import LoggedList from './Logged_list';
 import NavList from '../home_header/Nav_list';
@@ -9,7 +8,7 @@ import LoggedInfo from '../logged_header/Logged_info';
 class LoggedHeader extends Component {
     render() {
         return(
-            <BrowserRouter>
+            
             <header name='Header'>
                 <div className='grid-container'>
                     <div className="row">
@@ -41,7 +40,7 @@ class LoggedHeader extends Component {
                     </div>
                 </div>
             </header>
-        </BrowserRouter>
+        
         )
     }
 }

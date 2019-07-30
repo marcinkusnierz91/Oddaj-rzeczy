@@ -24,10 +24,10 @@ class LoggedInfo extends Component {
             </div>
             <div className="row">
                 <div className="col-10 logged_header-info">
-                    <div className='rectangle'>Wybierz rzeczy</div>
-                    <div className='rectangle'>Spakuj je w worki</div>
-                    <div className='rectangle'>Wybierz fundację</div>
-                    <div className='rectangle'>Zamów kuriera</div>
+                    <div className='rectangle'><span>1 <br/></span>Wybierz <br/> &nbsp;&nbsp;rzeczy</div>
+                    <div className='rectangle'><span>2 <br/></span>Spakuj je<br/>&nbsp;w worki</div>
+                    <div className='rectangle'><span>3 <br/></span>Wybierz <br/>fundację</div>
+                    <div className='rectangle'><span>4 <br/></span>Zamów <br/>kuriera</div>
                 </div>
             </div>
         </>

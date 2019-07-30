@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import LoggedHeader from './logged_header/LoggedHeader';
-import Footer from './home_footer/Footer';
+import LoggedFooter from './logged_footer/LoggedFooter';
 import LoggedSection from './logged_section/Logged_section';
 
 class LoggedPage extends Component {
@@ -9,7 +9,7 @@ class LoggedPage extends Component {
         <>
           <LoggedHeader />
           <LoggedSection />
-          <Footer /> 
+          <LoggedFooter /> 
         </>
     )
   }

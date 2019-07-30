@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import {BrowserRouter,Switch, Route} from 'react-router-dom';
 // import HeaderButton from '../header/Header_button';
 import LogList from '../home_header/Log_list';
 import NavList from '../home_header/Nav_list';
-import Start_img from '../home_header/Start_img';
+import StartImage from '../home_header/Start_img';
 // import SignIn from '../home_header/SignIn';
 import GiveStaff from'./Give_stuff';
 
@@ -19,7 +18,7 @@ class Header extends Component {
                     <div className="row">
                         <Link to='/'>
                             <div className="col-10">
-                                <Start_img />
+                                <StartImage />
                             </div>
                         </Link>
                         <nav className='col-11 navigation-container'>
