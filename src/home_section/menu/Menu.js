@@ -11,12 +11,14 @@ import LocalCollectionMenu from './LocalCollection_menu';
 class Menu extends Component {
     state = {
         page: 1,
+        styled: false,
     }
    
 
     handleFoundation = () => {
         this.setState({
             page:1,
+            styled: !this.state.styled,
         })
     }
 
@@ -76,9 +78,9 @@ class Menu extends Component {
 
                     <div className="row">
                         <div className="col-21 menu-pages">
-                            <div className="col-1 pageNum">1</div>
-                            <div className="col-1 pageNum">2</div>
-                            <div className="col-1 pageNum">3</div>
+                            <div className="col-1 pageNum" onClick={this.handleFoundation}>1</div>
+                            <div className="col-1 pageNum" onClick={this.handleOrganization}>2</div>
+                            <div className="col-1 pageNum" onClick={this.handleCollection}>3</div>
                         </div>
                     </div>
                 </section>

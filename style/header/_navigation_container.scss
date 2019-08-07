@@ -1,0 +1,87 @@
+.navigation-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    .log-list {
+        // margin-top:20px;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        li {
+            display: block;
+            padding: 15px;
+            font-size: 14px;
+            .link {
+                padding: 10px;
+                text-decoration: none;
+                color: $lighterMain;
+                border: 1px solid transparent;
+                &:hover {
+                    border: 1px solid yellow;
+                }
+            }
+        }
+    }
+    
+    .nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li {
+            display: block;
+            // margin: 10px;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid transparent;
+            font-weight: 300;
+            color: $darkerMain;
+            &:hover {
+                border: 1px solid $darkerMain;
+                // padding: 10px;
+                // margin: 10px;
+            }
+            .header-navlink {
+                text-decoration: none;
+                color: $darkerMain;
+                
+            }
+        }
+    }
+
+    .title {
+        margin-top: 100px;
+        h2 {
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+            color: $darkerMain;
+        }
+    }
+
+    .decoration {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        .link {
+            color: $darkerMain;
+            font-size: 30px;
+            text-decoration: none;
+            text-align: center;
+            width: 250px;
+            height:110px;
+            word-break: normal;
+            border: 1px solid $darkerMain;
+            margin: 10px;
+            padding:18px;
+            font-weight: 300;
+        }
+
+    }
+}

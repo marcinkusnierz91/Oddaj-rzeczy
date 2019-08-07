@@ -6,9 +6,10 @@ class LoggedNotification extends Component {
         return (
             // <section className="grid-container notification">
                 <div className="row notification">
-                    <div className="col-21 notification-info">
+                    <div className="col-3"></div>
+                    <div className="col-15 notification-info">
                         <h2>Ważne!</h2>
-                        <h3>Uzupełnij szczegóły dotyczące twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</h3>
+                        <h3>{this.props.text}</h3>
                     </div>
                 </div>
             // </section>

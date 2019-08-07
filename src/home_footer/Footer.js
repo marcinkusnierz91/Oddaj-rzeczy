@@ -6,7 +6,7 @@ class Footer extends Component {
     
     render() {
         return (
-            <footer className="grid-container footer">
+            <footer className="grid-container footer " >
                 <div className="row">
                     <div className="col-18 footer-title">
                         <div className="col-5">

@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-        <div className="App">
+        <div className="App ">
           {/* <Home/> */}
           {/* <SignIn/> */}
           {/* <LoggedPage /> */}

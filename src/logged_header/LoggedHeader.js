@@ -9,7 +9,7 @@ class LoggedHeader extends Component {
     render() {
         return(
             
-            <header name='Header'>
+            <header name='Header' >
                 <div className='grid-container'>
                     <div className="row">
                         <Link to='/logged/'>
@@ -29,13 +29,7 @@ class LoggedHeader extends Component {
                                     <NavList />  
                                 </div>
                             </div>
-                            <LoggedInfo/>
-                            {/* <Switch>
-                                <Route path='/' component={GiveStaff} />
-                                <Route exact path='/signin' component={SignIn}/>
-                            </Switch> */}
-                            
-                            
+                            <LoggedInfo/>    
                         </nav>
                     </div>
                 </div>

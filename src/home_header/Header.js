@@ -13,8 +13,8 @@ class Header extends Component {
     render() {
         return (
         
-            <header name='Header'>
-                <div className='grid-container'>
+            <header name='Header' >
+                <div className='grid-container '>
                     <div className="row">
                         <Link to='/'>
                             <div className="col-10">

@@ -8,7 +8,7 @@ import Menu from './menu/Menu'
 class MainSection extends Component {
     render() {
         return (
-            <section className="grid-container"> 
+            <section className="grid-container " > 
                 <ThreeColumns />
                 <Specials />
                 <About/>

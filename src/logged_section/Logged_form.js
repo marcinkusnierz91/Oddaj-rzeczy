@@ -1,130 +1,76 @@
 import React, { Component } from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
-
 import LoggedNotification from './Logged_notification'
+import FirstStep from './Logged_form_first_step';
+import SecondStep from './Logged_form_second_step';
+import ThirdStep from './Logged_form_third_step';
+import FourthStep from './Logged_form_fourth_step';
+import FifthStep from './Logged_form_fifth_step';
+import FormSummary from './Logged_form_summary';
+import FormThanks from './Logged_form_thanks';
 
-class LoggedFormItems extends Component {
+class LoggedForm extends Component {
     state = {
         checked: false,
         page: 1,
+        street: '',
+        city: '',
+        postCode: '',
+        phone: '',
+        date: '',
+        time: '',
+        courierInfo: '',
+    }
+
+
+    nextPage = () => {
+        this.setState({
+            page: this.state.page + 1
+        })
+        
+    }
+
+    prevPage = () => {
+        this.setState({
+            page: this.state.page - 1
+        })
+        
     }
     
-    handleItem = (event) => {
-        this.setState({
-            [event.target.name] : event.target.value 
-        })
-    }
-
-    // handleChange = () => {
-    //     this.setState({
-            
-    //     })
-    // }
-
-    // handleSubmit = event => {
-    //     // event.preventDefault();
-    //     this.setState({
-    //         page: 2
-    //     })
-    // }
-
-    // handleItems = (event) => {
-    //     let items;
-
-        
-    //     this.setState({
-            
-    //     })
-    // }
-
-    handleNextPage = () => {
-        this.setState({
-            page: 2
-        })
-    }
-
     render() {
         console.log(this.state)
+        let page;
+        let notification;
+        if (this.state.page == 1) {
+            page = <FirstStep nextPage={this.nextPage}/>;
+            notification = <LoggedNotification text='Uzupełnij szczegóły dotyczące twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.'/>;
+        } else if (this.state.page == 2){
+            // let alias = <a htmlFor='#'>TUTAJ</a>
+            page = <SecondStep nextPage={this.nextPage} prevPage={this.prevPage}/>;
+            notification = <LoggedNotification text='Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.' />;
+        } else if (this.state.page == 3) {
+            page = <ThirdStep nextPage={this.nextPage} prevPage={this.prevPage}/>
+            notification = <LoggedNotification text='Jeśli wiesz komu chcesz pomóc możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować oragnizacje po ich likalizacji bądź celu ich pomocy.' />;
+        } else if (this.state.page == 4) {
+            page = <FourthStep nextPage={this.nextPage} prevPage={this.prevPage} />
+            notification = <LoggedNotification text='Na podstawie Twoich kryteriów oraz rzeczy, które masz do oddania wybraliśmy organizacje, którym możesz pomóc. Wybierz jedną, do której trafi Twoja przesyłka.' />
+        } else if (this.state.page == 5) { 
+            page = <FifthStep nextPage={this.nextPage} prevPage={this.prevPage}/>;
+            notification = <LoggedNotification text='Podaj adres oraz termin odbioru rzeczy.' />
+        } else if (this.state.page == 6) {
+            page = <FormSummary nextPage={this.nextPage} prevPage={this.prevPage} callbackFromParent/>
+        } else if (this.state.page == 7) {
+            page = <FormThanks />
+        } else {
+            return null
+        }
         return (
             <section className="grid-container logged-form">
-                <LoggedNotification />
+                {notification}
                 <div className="row">
                     <div className="col-21">
                         <div className="col-13">
-                            {/* <form onSubmit={this.handleSubmit}> */}
-                            <form>
-                                <div className="row">
-                                    <div className="col-3"></div>
-                                    <div className="col-6 logged-form_page">
-                                        <span>Krok {this.state.page}/4</span>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-3"></div>
-                                    <div className="col-6 logged-form_tip">
-                                        <h3>Zaznacz co chcesz oddać</h3>
-                                    </div>
-                                </div>
-                                <div className="form-group row">
-                                    
-                                    <div className="row">
-                                    <div className="col-3"></div>
-                                        <div className="col-8 logged-form_check">
-                                            <input type="checkbox" id="check1" name='check1' value='ubrania, które nadają się do ponownego użycia'/>
-                                            <label htmlFor="check1" >
-                                            ubrania, które nadają się do ponownego użycia
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                    <div className="col-3"></div>
-                                        <div className="col-8 logged-form_check">
-                                            <input type="checkbox" id="check2" value='ubrania do wyrzucenia'/>
-                                            <label htmlFor="check2">
-                                            ubrania do wyrzucenia
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                    <div className="col-3"></div>
-                                        <div className="col-8 logged-form_check">
-                                            <input type="checkbox" id="check3"/>
-                                            <label htmlFor="check3">
-                                            zabawki
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                    <div className="col-3"></div>
-                                        <div className="col-8 logged-form_check">
-                                            <input type="checkbox" id="check4"/>
-                                            <label htmlFor="check4">
-                                            książki
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                    <div className="col-3"></div>
-                                        <div className="col-8 logged-form_check">
-                                            <input type="checkbox" id="check5"/>
-                                            <label htmlFor="check5">
-                                            inne
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <div className="row">
-                                        <div className="col-3"></div>
-                                        <div className="col-8">
-                                            <div className="form-check">
-                                                <input onClick={this.handleNextPage} className="logged-form_button" type="submit" id="form-submit_button" value='Delej'/>
-                                                {/* <label class="form-check-label" for="check5">
-                                                Ubrania, które nadają się do ponownego użycia
-                                                </label> */}
-                                            </div>
-                                        </div>
-                                    </div>
-                            </form>
+                            
+                            {page}
                         </div>
 
                         
@@ -135,4 +81,4 @@ class LoggedFormItems extends Component {
     }
 }
 
-export default LoggedFormItems;
+export default LoggedForm;
