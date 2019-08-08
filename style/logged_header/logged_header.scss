@@ -39,5 +39,25 @@
         color: $darkerMain;
     }
 }
+.dropdown {
+    
+    .e-btn-icon.e-image {
+        background: url(../src/images/cog-solid.svg) ;
+        width: 32px;
+        height: 32px;
+    }
+    
+    button {
+    //   margin: 25px 5px 20px 20px;
+        background: url(../src/images/57.svg) ;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
 
-
+.helloName {
+    margin-top:8px;
+    color: $darkerMain;
+}

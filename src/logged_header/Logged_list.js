@@ -3,24 +3,43 @@ import React, {Component} from 'react';
 // import SignUpLink from './Sign_up_link';
 // import SideBar from "./sidebar";
 // import SelectBox from '../../node_modules/'
+import {DropDownButtonComponent} from '@syncfusion/ej2-react-splitbuttons'
+import {enableRipple} from '@syncfusion/ej2-base'
 
 
-
+enableRipple(true);
 
 
 class LoggedList extends Component {
     
-    logout = e => {
-        console.log('Logging out')
+    state = {
+        items: [
+            {text: 'Profil'},
+            {text: 'Ustawienia'},
+            {text: 'Moje zbiórki'},
+            {text: 'Wyloguj'}
+        ]
+
     }
+
+    
+    select(args) {
+        if (args.item.text === 'Wyloguj') {
+            window.open('http://localhost:3000/')
+        }
+    }
+    
+
     
     render() {
         return (
         
             <ul className='log-list'>
-                <li><div>Witaj Marcin</div></li>
+                <li>
+                    <div className='helloName'>Witaj Marcin</div>
+                </li>
                 <li className='dropdown'>
-                    hamburgier
+                    <DropDownButtonComponent select={this.select} items={this.state.items} iconCss='e-icons e-menu' cssClass='e-caret-hide'/>
                 </li>
             </ul>
             
